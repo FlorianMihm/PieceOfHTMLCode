@@ -29,12 +29,39 @@
           </div>
         </div>
       </nav>
+    <div class="container">
       <div class="row">
-        <div class="col-4 card">
+        <div class="col card">
             <h3 class="card-header">Motor</h3>
             <p class="card-body">Motor für XS 250</p>
-            <p class="card-footer">100,00€ <button class="btn btn-success">Kaufen</button></p>
+            <p class="card-footer">100,00€
+                <button class="btn btn-sm btn-secondary" onclick="less()">-</button>
+                <input type="text" id="mengeMotor" value="0" />
+                <button class="btn btn-sm btn-secondary" onclick="more()">+</button>
+                <button class="btn btn-success">Kaufen</button></p>
+        </div>
+        <div class="col card">
+            <h3 class="card-header">Getriebe</h3>
+            <p class="card-body">Getriebe für XS 250</p>
+            <p class="card-footer">89,00€ <button class="btn btn-success">Kaufen</button></p>
+        </div>
+        <div class="col card">
+            <h3 class="card-header">Blinker</h3>
+            <p class="card-body">Blinker für XS 250</p>
+            <p class="card-footer">25,00€ <button class="btn btn-success">Kaufen</button></p>
         </div>
       </div>
+    </div>
+    <script>
+        let count = 0;
+        
+        function less() {
+            count = count - 1;
+            document.getElementById("mengeMotor").innterHTML(count);
+        }
+        function more() {
+            count = count + 1;
+            document.getElementById("mengeMotor").innterHTML(count);
+        }
 </body>
 </html>
